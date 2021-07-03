@@ -50,9 +50,7 @@ function playRound(playerSelection, computerSelection) {
       return 'You won this round!'
     }
   }
-
 }
-
 
 function game() {
   for (let i = 0; i < 5; i++) {
@@ -62,12 +60,13 @@ function game() {
     console.log(`You picked ${playerSelection}, your score is: ${userScore}`)
     console.log(`The computer picked ${computerSelection}, the computer's score is: ${compScore}`)
 
-
   }
   if (userScore > compScore) {
     console.log('Congrats, you won the game!')
-  } else {
+  } else if (userScore < compScore) {
     console.log('The computer won the game, better luck next time.')
+  } else {
+    console.log('The game is a tie.')
   }
 }
 
