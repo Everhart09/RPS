@@ -1,0 +1,15 @@
+The computer  needs to randomly pick rock, paper or scissors. - easy  
+the computer than needs to output the choice it made. - easy
+
+The user needs to pick rock paper or scissors. - easy
+the computer needs to then  output the choice of the user. -easy
+
+The computer  then  needs to determine the winner of the game and award one point to said winner unless the game is a tie  where no point is awarded. -medium
+
+The user and the computer then need to play 5 games while awarding points accordingly.
+than the computer needs to compare the users points vs the computers points and  determine a winner out of the 5 games and display the winner. 
+
+
+
+
+
