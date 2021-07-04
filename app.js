@@ -15,7 +15,7 @@ function computerPlay() {
 
 /*---------------------------------------------------------------------------------*/
 
-/* This is where score  values are stored*/
+/* This is where score values are stored*/
 
 let compScore = 0;
 let userScore = 0;
