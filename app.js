@@ -1,4 +1,5 @@
 /* This is where the computer makes a choice of rock, paper or scissors at random*/
+
 function computerPlay() {
   let compChoice = Math.floor(Math.random() * 3)
 
@@ -11,14 +12,18 @@ function computerPlay() {
       return 'scissors';
   }
 }
+
 /*---------------------------------------------------------------------------------*/
 
 /* This is where score  values are stored*/
+
 let compScore = 0;
 let userScore = 0;
+
 /*---------------------------------------*/
 
 /*This is where the computer's slection is compaired to the user's slection and a point  is awarded accordingly.*/
+
 function playRound(playerSelection, computerSelection) {
 
   if (playerSelection === computerSelection) {
@@ -56,9 +61,11 @@ function playRound(playerSelection, computerSelection) {
     }
   }
 }
+
 /*--------------------------------------------------------------------------------------------------------*/
 
 /*This is where the game is played 5 times in a row and output the choices, score and winner of the round/game to the console.*/
+
 function game() {
   for (let i = 0; i < 5; i++) {
     const playerSelection = prompt('Make a choice: Rock, Paper, Scissors').toLowerCase()
@@ -79,4 +86,5 @@ function game() {
 }
 
 game()
+
 /*-----------------------------------------------------------------------------------------------------------------------------*/
