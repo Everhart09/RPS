@@ -22,7 +22,7 @@ let userScore = 0;
 
 /*---------------------------------------*/
 
-/*This is where the computer's slection is compaired to the user's slection and a point  is awarded accordingly.*/
+/*This is where the computer's slection is compaired to the user's slection and a point is awarded accordingly.*/
 
 function playRound(playerSelection, computerSelection) {
 
