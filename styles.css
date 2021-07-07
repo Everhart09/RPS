@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: #f6cd61;
+  background: #F5CB5C;
 }
 
 header {
@@ -15,11 +15,12 @@ header {
   justify-content: center;
   font-size: 1.3em;
   margin-top: auto;
-  background-color: #0e9aa7;
-  color: white;
+  background-color: #242423;
+  color: #CFDBD5;
   height: 10vh;
   align-items: center;
   box-shadow: 0px 6px 26px 3px rgba(0, 0, 0, 0.507);
+  user-select: none;
 }
 
 header:hover {
@@ -40,7 +41,6 @@ main {
   align-items: center;
   display: flex;
   height: 65vh;
-  color: black;
 }
 
 .container {
@@ -55,10 +55,11 @@ footer {
   justify-content: center;
   align-items: center;
   height: 3vh;
-  background-color: #0e9aa7;
+  background-color: #242423;
   margin-top: auto;
-  color: white;
+  color: #CFDBD5;
   box-shadow: 0px -6px 26px 3px rgba(0, 0, 0, 0.507);
+  user-select: none;
 }
 
 .choice-box {
@@ -66,16 +67,17 @@ footer {
 }
 
 .player-choice {
-  color: white;
+  color: #CFDBD5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0e9aa7;
+  background-color: #242423;
   width: 400px;
   height: 500px;
   border-bottom-left-radius: 5%;
   border-top-left-radius: 5%;
   box-shadow: 0px 2px 36px 9px rgba(0, 0, 0, 0.417);
+  user-select: none;
 }
 
 .p-header {
@@ -112,11 +114,12 @@ footer {
   align-self: flex-start;
   width: 200px;
   height: 100px;
-  background-color: #0e9aa7;
-  color: white;
+  background-color: #242423;
+  color: #CFDBD5;
   box-shadow: 0px 2px 36px 9px rgba(0, 0, 0, 0.417);
   font-size: 2em;
   border-radius: 5%;
+  user-select: none;
 }
 
 .score {
@@ -141,8 +144,8 @@ footer {
   align-self: flex-end;
   width: 100px;
   height: 100px;
-  background-color: #0e9aa7;
-  color: white;
+  background-color: #242423;
+  color: #CFDBD5;
   box-shadow: 0px 2px 36px 9px rgba(0, 0, 0, 0.417);
   font-size: 2em;
   border-radius: 5%;
@@ -150,6 +153,7 @@ footer {
   margin-left: 50px;
   border-radius: 25%;
   padding-top: 15px;
+  user-select: none;
 }
 
 #reset:hover {
@@ -168,16 +172,17 @@ footer {
 }
 
 .comp-choice {
-  color: white;
+  color: #CFDBD5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0e9aa7;
+  background-color: #242423;
   width: 400px;
   height: 500px;
   border-bottom-right-radius: 5%;
   border-top-right-radius: 5%;
   box-shadow: 0px 2px 36px 9px rgba(0, 0, 0, 0.417);
+  user-select: none;
 }
 
 .c-header {
@@ -202,19 +207,27 @@ footer {
 
 #game-win {
   display: none;
-  color: #5e6261;
+  color: #333533;
+  user-select: none;
+  cursor: default;
 }
 
 #game-lose {
   display: none;
-  color: #5e6261;
+  color: #333533;
+  user-select: none;
+  cursor: default;
 }
 
 #game-tie {
   display: none;
-  color: #5e6261;
+  color: #333533;
+  user-select: none;
+  cursor: default;
 }
 
 .how-to {
-  color: #5e6261;
+  color: #333533;
+  user-select: none;
+  cursor: default;
 }
