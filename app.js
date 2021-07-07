@@ -1,90 +1,114 @@
-/* This is where the computer makes a choice of rock, paper or scissors at random*/
-
 function computerPlay() {
-  let compChoice = Math.floor(Math.random() * 3)
 
-  switch (compChoice) {
+  if (userScore === 5 || computerScore === 5) {
+    return
+  }
+  let randomNumber = Math.floor(Math.random() * 3)
+
+  switch (randomNumber) {
     case 0:
-      return 'rock';
+      document.getElementById("comp-R").style.color = 'red'
+      document.getElementById("comp-P").style.color = 'white'
+      document.getElementById("comp-S").style.color = 'white'
+      return 'Rock';
     case 1:
-      return 'paper';
+      document.getElementById("comp-P").style.color = 'red'
+      document.getElementById("comp-R").style.color = 'white'
+      document.getElementById("comp-S").style.color = 'white'
+      return 'Paper';
     case 2:
-      return 'scissors';
+      document.getElementById("comp-S").style.color = 'red'
+      document.getElementById("comp-P").style.color = 'white'
+      document.getElementById("comp-R").style.color = 'white'
+      return 'Scissors';
   }
 }
 
-/*---------------------------------------------------------------------------------*/
 
-/* This is where score values are stored*/
 
-let compScore = 0;
+
+let playerChoice = document.querySelectorAll('.player-option');
+
+for (let i = 0; i < playerChoice.length; i++) {
+  playerChoice[i].addEventListener("click", () => {
+    userSelect = playerChoice[i].textContent
+  })
+}
+
 let userScore = 0;
+let computerScore = 0;
 
-/*---------------------------------------*/
+function playRound(userSelect, compSelect) {
 
-/*This is where the computer's slection is compaired to the user's slection and a point is awarded accordingly.*/
-
-function playRound(playerSelection, computerSelection) {
-
-  if (playerSelection === computerSelection) {
-
-    return 'This round is a tie, no points awarded.';
+  if (userScore === 5 || computerScore === 5) {
+    return
   }
 
-  if (playerSelection === 'rock') {
-    if (computerSelection === 'paper') {
-      compScore++;
-      return 'The computer won this round, try again.';
+
+  if (userSelect === compSelect) {
+
+    return 'Tie'
+  }
+
+  if (userSelect === 'Rock') {
+    if (compSelect === 'Paper') {
+      computerScore++
+      document.getElementById("comp-score").innerText++
     } else {
-      userScore++;
-      return 'You won this round!';
+      userScore++
+      document.getElementById("player-score").innerText++
     }
   }
 
-  if (playerSelection === 'paper') {
-    if (computerSelection === 'scissors') {
-      compScore++;
-      return 'The computer won this round, try again.';
+  if (userSelect === 'Paper') {
+    if (compSelect === 'Scissors') {
+      computerScore++
+      document.getElementById("comp-score").innerText++
     } else {
-      userScore++;
-      return 'You won this round!';
+      userScore++
+      document.getElementById("player-score").innerText++
     }
   }
 
-  if (playerSelection === 'scissors') {
-    if (computerSelection === 'rock') {
-      compScore++;
-      return 'The computer won this round, try again.';
+  if (userSelect === 'Scissors') {
+    if (compSelect === 'Rock') {
+      computerScore++
+      document.getElementById("comp-score").innerText++
     } else {
-      userScore++;
-      return 'You won this round!';
+      userScore++
+      document.getElementById("player-score").innerText++
     }
   }
+
+  if (userScore === 5) {
+    document.getElementById("game-win").style.display = 'flex'
+    document.getElementById("game-lose").style.display = 'hide'
+  } else if (computerScore === 5) {
+    document.getElementById("game-win").style.display = 'hide'
+    document.getElementById("game-lose").style.display = 'flex'
+  }
+
+
 }
-
-/*--------------------------------------------------------------------------------------------------------*/
-
-/*This is where the game is played 5 times in a row and output the choices, score and winner of the round/game to the console.*/
 
 function game() {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt('Make a choice: Rock, Paper, Scissors').toLowerCase();
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`You picked ${playerSelection}, your score is: ${userScore}`);
-    console.log(`The computer picked ${computerSelection}, the computer's score is: ${compScore}`);
+  let userSelect;
+  let playerChoice = document.querySelectorAll('.player-option');
 
-  }
-
-  if (userScore > compScore) {
-    console.log('Congrats, you won the game!');
-  } else if (userScore < compScore) {
-    console.log('The computer won the game, better luck next time.');
-  } else {
-    console.log('The game is a tie.');
+  for (let i = 0; i < playerChoice.length; i++) {
+    playerChoice[i].addEventListener("click", () => {
+      userSelect = playerChoice[i].textContent
+      let compSelect = computerPlay()
+      playRound(userSelect, compSelect)
+    })
   }
 }
 
-game();
+game()
 
-/*-----------------------------------------------------------------------------------------------------------------------------*/
+let reset = document.getElementById("reset")
+
+
+reset.addEventListener("click", () => {
+  location.reload();
+})
