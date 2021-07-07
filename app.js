@@ -44,7 +44,6 @@ function playRound(userSelect, compSelect) {
     return
   }
 
-
   if (userSelect === compSelect) {
 
     return 'Tie'
