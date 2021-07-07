@@ -7,17 +7,17 @@ function computerPlay() {
 
   switch (randomNumber) {
     case 0:
-      document.getElementById("comp-R").style.color = 'red'
+      document.getElementById("comp-R").style.color = 'rgb(243, 88, 88)'
       document.getElementById("comp-P").style.color = 'white'
       document.getElementById("comp-S").style.color = 'white'
       return 'Rock';
     case 1:
-      document.getElementById("comp-P").style.color = 'red'
+      document.getElementById("comp-P").style.color = 'rgb(243, 88, 88)'
       document.getElementById("comp-R").style.color = 'white'
       document.getElementById("comp-S").style.color = 'white'
       return 'Paper';
     case 2:
-      document.getElementById("comp-S").style.color = 'red'
+      document.getElementById("comp-S").style.color = 'rgb(243, 88, 88)'
       document.getElementById("comp-P").style.color = 'white'
       document.getElementById("comp-R").style.color = 'white'
       return 'Scissors';
