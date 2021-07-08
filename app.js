@@ -71,9 +71,15 @@ function playRound(userSelect, compSelect) {
   if (userScore === 5) {
     document.getElementById("game-win").style.display = 'flex'
     document.getElementById("game-lose").style.display = 'none'
+    document.getElementById("comp-R").style.color = 'white'
+    document.getElementById("comp-P").style.color = 'white'
+    document.getElementById("comp-S").style.color = 'white'
   } else if (computerScore === 5) {
     document.getElementById("game-win").style.display = 'none'
     document.getElementById("game-lose").style.display = 'flex'
+    document.getElementById("comp-R").style.color = 'white'
+    document.getElementById("comp-P").style.color = 'white'
+    document.getElementById("comp-S").style.color = 'white'
   }
 
 
@@ -105,8 +111,4 @@ reset.addEventListener("click", () => {
   computerScore = 0;
   document.getElementById("comp-score").innerText = '0'
   document.getElementById("player-score").innerText = '0'
-  document.getElementById("comp-R").style.color = 'white'
-  document.getElementById("comp-P").style.color = 'white'
-  document.getElementById("comp-S").style.color = 'white'
-
 })
