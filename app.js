@@ -109,5 +109,15 @@ let reset = document.getElementById("reset")
 
 
 reset.addEventListener("click", () => {
-  location.reload();
+
+  document.getElementById("game-win").style.display = 'none'
+  document.getElementById("game-lose").style.display = 'none'
+  userScore = 0;
+  computerScore = 0;
+  document.getElementById("comp-score").innerText = '0'
+  document.getElementById("player-score").innerText = '0'
+  document.getElementById("comp-R").style.color = 'white'
+  document.getElementById("comp-P").style.color = 'white'
+  document.getElementById("comp-S").style.color = 'white'
+
 })
