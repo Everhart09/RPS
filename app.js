@@ -24,17 +24,6 @@ function computerPlay() {
   }
 }
 
-
-
-
-let playerChoice = document.querySelectorAll('.player-option');
-
-for (let i = 0; i < playerChoice.length; i++) {
-  playerChoice[i].addEventListener("click", () => {
-    userSelect = playerChoice[i].textContent
-  })
-}
-
 let userScore = 0;
 let computerScore = 0;
 
@@ -81,9 +70,9 @@ function playRound(userSelect, compSelect) {
 
   if (userScore === 5) {
     document.getElementById("game-win").style.display = 'flex'
-    document.getElementById("game-lose").style.display = 'hide'
+    document.getElementById("game-lose").style.display = 'none'
   } else if (computerScore === 5) {
-    document.getElementById("game-win").style.display = 'hide'
+    document.getElementById("game-win").style.display = 'none'
     document.getElementById("game-lose").style.display = 'flex'
   }
 
